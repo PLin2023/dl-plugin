@@ -131,6 +131,11 @@ public class ValvePlugin extends BasePlugin {
                     consultation -> String.valueOf(consultation.getSpec().getName())))
             );
             indexSpecs.add(new IndexSpec()
+                .setName("spec.status")
+                .setIndexFunc(simpleAttribute(Consultation.class,
+                    consultation -> String.valueOf(consultation.getSpec().getStatus())))
+            );
+            indexSpecs.add(new IndexSpec()
                 .setName("spec.email")
                 .setIndexFunc(simpleAttribute(Consultation.class,
                     consultation -> String.valueOf(consultation.getSpec().getEmail())))
