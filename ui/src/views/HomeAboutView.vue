@@ -71,7 +71,7 @@ const handleSaveLink = async () => {
 <template>
   <VPageHeader title="首页关于">
     <template #icon>
-      <Icon icon="arcticons:about-you" class="mr-2 self-center"/>
+      <Icon icon="cib:about-me" class="mr-2 self-center"/>
     </template>
   </VPageHeader>
 

@@ -19,6 +19,7 @@ import {
 } from "@halo-dev/components";
 import { axiosInstance } from "@halo-dev/api-client";
 import { formatDatetime } from "../utils/date";
+import {Icon} from "@iconify/vue";
 
 const editingModal = ref<boolean>(false);
 const selectedProductCategory = ref<ProductCategory>();
@@ -92,7 +93,7 @@ function handleDeleteCategory(category: ProductCategory) {
   />
   <VPageHeader title="产品分类">
     <template #icon>
-      <IconCategoryFill class="mr-2 self-center" />
+      <Icon icon="material-symbols:category" class="mr-2 self-center"/>
     </template>
     <template #actions>
       <VSpace>

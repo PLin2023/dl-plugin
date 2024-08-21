@@ -16,6 +16,7 @@ import {
 } from "@halo-dev/components";
 import {axiosInstance} from "@halo-dev/api-client";
 import {formatDatetime} from "../utils/date";
+import {Icon} from "@iconify/vue";
 
 const checkedAll = ref(false);
 const editingModal = ref<boolean>(false);
@@ -150,7 +151,7 @@ function handleDeleteBanner(banner: Banner) {
   />
   <VPageHeader title="轮播图">
     <template #icon>
-      <IconImageAddLine class="mr-2 self-center"/>
+      <Icon class="mr-2 self-center" icon="material-symbols-light:planner-banner-ad-pt-rounded"/>
     </template>
     <template #actions>
       <VSpace>

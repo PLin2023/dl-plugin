@@ -16,6 +16,7 @@ import {axiosInstance} from "@halo-dev/api-client";
 import {formatDatetime} from "../utils/date";
 import {useTimelineFetch} from "@/composables/use-timeline";
 import TimelineEditModal from "@/components/timeline-edit-modal.vue";
+import {Icon} from "@iconify/vue";
 
 const checkedAll = ref(false);
 const editingModal = ref<boolean>(false);
@@ -150,7 +151,7 @@ function handleDeleteTimeline(timeline: Timeline) {
   />
   <VPageHeader title="时间线">
     <template #icon>
-      <IconTimerLine class="mr-2 self-center"/>
+      <Icon class="mr-2 self-center" icon="material-symbols:timeline"/>
     </template>
     <template #actions>
       <VSpace>

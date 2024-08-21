@@ -11,6 +11,7 @@ import AdvantageView from "./views/AdvantageView.vue";
 import ProductCategoryView from "@/views/ProductCategoryView.vue";
 import ProductView from "@/views/ProductView.vue";
 import ConsultationView from "@/views/ConsultationView.vue";
+import "./style.css"
 
 export default definePlugin({
   components: {},
@@ -27,7 +28,9 @@ export default definePlugin({
           menu: {
             name: "轮播图",
             group: "首页定制",
-            icon: markRaw(IconImageAddLine),
+            icon: h(Icon, {
+              icon: "material-symbols-light:planner-banner-ad-pt-rounded"
+            }),
             priority: 0,
           },
         },
@@ -45,7 +48,9 @@ export default definePlugin({
           menu: {
             name: "时间线",
             group: "首页定制",
-            icon: markRaw(IconTimerLine),
+            icon: h(Icon, {
+              icon: "material-symbols:timeline"
+            }),
             priority: 0,
           },
         },
@@ -63,7 +68,9 @@ export default definePlugin({
           menu: {
             name: "首页关于",
             group: "首页定制",
-            icon: markRaw(IconBookRead),
+            icon: h(Icon, {
+              icon: "cib:about-me"
+            }),
             priority: 0,
           },
         },
@@ -81,7 +88,9 @@ export default definePlugin({
           menu: {
             name: "应用领域",
             group: "首页定制",
-            icon: markRaw(IconBookRead),
+            icon: h(Icon, {
+              icon: "mdi:wide-area-network"
+            }),
             priority: 0,
           },
         },
@@ -99,7 +108,9 @@ export default definePlugin({
           menu: {
             name: "核心优势",
             group: "首页定制",
-            icon: markRaw(IconBookRead),
+            icon: h(Icon, {
+              icon: "gg:push-up"
+            }),
             priority: 0,
           },
         },
@@ -117,7 +128,9 @@ export default definePlugin({
           menu: {
             name: "产品分类",
             group: "产品",
-            icon: markRaw(IconBookRead),
+            icon: h(Icon, {
+              icon: "material-symbols:category"
+            }),
             priority: 0,
           },
         },
@@ -130,12 +143,14 @@ export default definePlugin({
         name: "Product",
         component: ProductView,
         meta: {
-          title: "产品详情",
+          title: "产品列表",
           searchable: true,
           menu: {
-            name: "产品详情",
+            name: "产品列表",
             group: "产品",
-            icon: markRaw(IconBookRead),
+            icon: h(Icon, {
+              icon: "icon-park-solid:view-grid-detail"
+            }),
             priority: 0,
           },
         },
@@ -153,7 +168,9 @@ export default definePlugin({
           menu: {
             name: "产品咨询",
             group: "产品",
-            icon: markRaw(IconBookRead),
+            icon: h(Icon, {
+              icon: "wpf:ask-question"
+            }),
             priority: 0,
           },
         },

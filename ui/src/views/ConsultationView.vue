@@ -6,6 +6,7 @@ import type {Consultation, ConsultationList} from '@/types';
 import {formatDatetime} from '@/utils/date';
 import {useQuery} from "@tanstack/vue-query";
 import {axiosInstance} from "@halo-dev/api-client";
+import {Icon} from "@iconify/vue";
 
 const searchParams = reactive({
   keyword: '',
@@ -118,7 +119,7 @@ onMounted(() => {
 <template>
   <VPageHeader title="咨询管理">
     <template #icon>
-      <IconListUnordered class="mr-2 self-center"/>
+      <Icon icon="wpf:ask-question" class="mr-2 self-center"/>
     </template>
   </VPageHeader>
 
@@ -240,7 +241,6 @@ onMounted(() => {
         </div>
 
         <div class="mt-4 flex justify-between items-center">
-          <span class="text-sm text-gray-500">共 {{ total }} 项数据</span>
           <VPagination
             v-model:page="searchParams.page"
             v-model:size="searchParams.size"

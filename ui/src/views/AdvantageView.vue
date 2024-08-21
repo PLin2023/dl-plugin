@@ -20,6 +20,7 @@ import {useApplicationAreaFetch} from "@/composables/use-application-area";
 import ApplicationAreaEditModal from "@/components/application-area-edit-modal.vue";
 import {useAdvantageFetch} from "@/composables/use-advantage";
 import AdvantageEditModal from "@/components/advantage-edit-modal.vue";
+import {Icon} from "@iconify/vue";
 
 const checkedAll = ref(false);
 const editingModal = ref<boolean>(false);
@@ -154,7 +155,7 @@ function handleDeleteBanner(advantage: Advantage) {
   />
   <VPageHeader title="核心优势">
     <template #icon>
-      <IconImageAddLine class="mr-2 self-center"/>
+      <Icon icon="gg:push-up" class="mr-2 self-center"/>
     </template>
     <template #actions>
       <VSpace>

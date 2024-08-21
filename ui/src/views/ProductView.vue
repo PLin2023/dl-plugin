@@ -149,6 +149,7 @@ watch(() => searchParams, () => {
 <template>
   <VPageHeader title="产品列表">
     <template #icon>
+      <Icon icon="icon-park-solid:view-grid-detail" class="mr-2 self-center"/>
     </template>
     <template #actions>
       <VSpace>
@@ -312,7 +313,6 @@ watch(() => searchParams, () => {
         </div>
 
         <div class="mt-4 flex justify-between items-center">
-          <span class="text-sm text-gray-500">共 {{ total }} 项数据</span>
           <VPagination
             v-model:page="searchParams.page"
             v-model:size="searchParams.size"

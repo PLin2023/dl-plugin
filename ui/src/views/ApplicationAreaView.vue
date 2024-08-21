@@ -18,6 +18,7 @@ import {axiosInstance} from "@halo-dev/api-client";
 import {formatDatetime} from "../utils/date";
 import {useApplicationAreaFetch} from "@/composables/use-application-area";
 import ApplicationAreaEditModal from "@/components/application-area-edit-modal.vue";
+import {Icon} from "@iconify/vue";
 
 const checkedAll = ref(false);
 const editingModal = ref<boolean>(false);
@@ -152,7 +153,7 @@ function handleDeleteBanner(applicationArea: ApplicationArea) {
   />
   <VPageHeader title="应用领域">
     <template #icon>
-      <IconImageAddLine class="mr-2 self-center"/>
+      <Icon icon="mdi:wide-area-network" class="mr-2 self-center"/>
     </template>
     <template #actions>
       <VSpace>
